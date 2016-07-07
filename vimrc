@@ -3,6 +3,7 @@ set foldmethod=syntax
 colorscheme solarized
 set nolist
 set clipboard=unnamed
+
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType JSON setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufRead *.html setlocal expandtab shiftwidth=2 softtabstop=2
@@ -38,6 +39,7 @@ autocmd BufRead *.c nnoremap <buffer> <F9> :wa<CR> :!gcc % -o %< && ./%< && rm %
 autocmd BufRead *.html nnoremap <buffer> <F9>  :wa<CR> :!open %<CR>
 autocmd BufRead *.js nnoremap <buffer> <F9>  :wa<CR> :!node %<CR>
 autocmd BufRead *.pug nnoremap <buffer> <F9>  :wa<CR> :!pug -P %<CR>
+autocmd BufRead *.md nnoremap <buffer> <F9>  :wa<CR> :!open %<CR>
 
 nnoremap <buffer> <F10> :wa<CR> :!make && ./%< && make clean<CR>
 "nnoremap <buffer> <F11>
