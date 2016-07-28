@@ -24,7 +24,7 @@ nmap <Leader>e :e<CR>
 nmap <Leader>W :wa<CR>
 nmap <Leader>Q :q!<CR>
 nmap <Leader>x :x<CR>
-nmap <Leader>m :!
+nmap <Leader>m :!touch
 
 " *.cpp 和 *.h 间切换
 nmap <Leader>ss :A<CR>
@@ -61,5 +61,16 @@ inoremap <C-l> <Right>
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 let g:EasyMotion_smartcase = 1
 
-" set the default root of ctrlsf as 'project'
+function ShortTabLabel ()
+    let bufnrlist = tabpagebuflist (v:lnum)
+    let label = bufname (bufnrlist[tabpagewinnr (v:lnum) -1])
+    let filename = fnamemodify (label, ':t')
+    return filename
+endfunction
+
+"set guitablabel=%{ShortTabLabel()}
+set guitablabel=%t 
 let g:ctrlsf_default_root = 'project'
+
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:jsx_ext_required = 0

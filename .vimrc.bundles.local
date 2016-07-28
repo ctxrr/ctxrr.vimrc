@@ -1,0 +1,4 @@
+Bundle 'dyng/ctrlsf.vim'
+Bundle 'vim-scripts/a.vim'
+Bundle 'Quramy/vim-js-pretty-template'
+Bundle 'mxw/vim-jsx'
