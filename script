@@ -1,0 +1,4 @@
+cp .vimrc ~/.spf13-vim-3/
+cp .vimrc.bundles ~/.spf13-vim-3/
+cp .vimrc.local ~
+cp .vimrc.bundles.local ~
