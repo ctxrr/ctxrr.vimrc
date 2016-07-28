@@ -1,0 +1,39 @@
+[user]
+    email ='iamwaynehu@gmail.com'
+    name =WayneHu
+[push]
+    default = simple
+[alias]
+    st = status
+    cm = commit
+    cma = commit --amend
+    br = branch -avv
+    ck = checkout
+    ckb = checkout -b
+    rb = rebase
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[color "diff"]
+    meta = blue black bold
+[core]
+    editor = /usr/local/bin/vim
+    excludesfile = /Users/waynehu/.gitignore_global
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[color]
+    ui = auto
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
