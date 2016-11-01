@@ -4,13 +4,6 @@ colorscheme solarized
 set nolist
 set clipboard=unnamed
 
-autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType JSON setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd BufRead *.html setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd BufRead *.php setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd BufRead *.css setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd BufRead *.pug setlocal expandtab shiftwidth=2 softtabstop=2
-
 nnoremap <leader>sp :CtrlSF<CR>
 
 let g:airline#extensions#tabline#enabled = 1
